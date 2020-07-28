@@ -19,7 +19,7 @@ class Main_Page extends React.Component{
 
     componentDidMount(){
         const json = JSON.parse(window.localStorage.getItem("LOCALSTORAGE_KEY"));
-        if(json !== undefined)
+        if(json !== undefined && json !== null)
             this.setState({ all_sections: Object.keys(json)})
         else{
             var sample_data =  ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
