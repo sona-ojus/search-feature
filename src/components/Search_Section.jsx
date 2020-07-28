@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 
-import Selected_String from './Selected_String'
+import SelectedString from './Selected_String'
 
 class Search_Section extends React.Component{
     constructor(props){
@@ -16,7 +16,7 @@ class Search_Section extends React.Component{
 
     componentDidMount(){
         const json = JSON.parse(window.localStorage.getItem("LOCALSTORAGE_KEY"));
-        if(json != undefined){
+        if(json !== undefined){
             this.setState({ string_data: json[this.props.section]});
             this.setState({ ori_data: json[this.props.section]});
         }
@@ -36,13 +36,13 @@ class Search_Section extends React.Component{
     }
 
     searchAction = (e) => {
-        if(e.target.value != ""){
+        if(e.target.value !== ""){
             var filter_results = this.state.ori_data.filter(info => {
                 return this.checkName(info, e.target.value);
             })
             this.setState({string_data: filter_results})
         }
-        else if(e.keyCode == '8'){
+        else if(e.keyCode === '8'){
             this.delete_action(this.state.select_data.length - 1);
         }
     }
@@ -55,10 +55,11 @@ class Search_Section extends React.Component{
     delete_action = (index, item) => {
         var select_arr = [...this.state.select_data];
 
-        if(item != undefined)
-            var index = select_arr.indexOf(item);
+        if(item !== undefined)
+            index = select_arr.indexOf(item);
 
         var final = select_arr.splice(index, 1);
+        console.log(final);
         this.setState({select_data: select_arr});        
     }
 
@@ -76,7 +77,7 @@ class Search_Section extends React.Component{
                 <div className="container">
                     { 
                         this.state.select_data.map((str, index) => {
-                            return  <Selected_String 
+                            return  <SelectedString 
                                         delete_selection={this.delete_selection}
                                         str = {str}
                                         index = {index}

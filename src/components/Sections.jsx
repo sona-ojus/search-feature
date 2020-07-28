@@ -1,8 +1,7 @@
 import React from 'react'
 import '../App.css'
 
-import Selected_String from './Selected_String'
-import Search_Section from './Search_Section'
+import SearchSection from './Search_Section'
 
 
 class Sections extends React.Component{
@@ -21,7 +20,7 @@ class Sections extends React.Component{
     render(){    
         var searchSection = "";  
         if(this.state.showSearch){
-            searchSection = <Search_Section section={this.props.section}/>
+            searchSection = <SearchSection section={this.props.section}/>
         }  
 
         return(

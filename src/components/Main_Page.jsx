@@ -2,7 +2,7 @@ import React from 'react'
 import '../App.css'
 
 import Sections from './Sections'
-import Add_New_Section from './Add_New_Section'
+import AddNewSection from './Add_New_Section'
 
 class Main_Page extends React.Component{
     constructor(props){
@@ -19,7 +19,7 @@ class Main_Page extends React.Component{
 
     componentDidMount(){
         const json = JSON.parse(window.localStorage.getItem("LOCALSTORAGE_KEY"));
-        if(json != undefined)
+        if(json !== undefined)
             this.setState({ all_sections: Object.keys(json)})
         else{
             var sample_data =  ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -32,7 +32,7 @@ class Main_Page extends React.Component{
     render(){   
         var add_section = "";
         if(this.state.showAddSection){
-            add_section = <Add_New_Section />
+            add_section = <AddNewSection />
         }  
 
         return(
