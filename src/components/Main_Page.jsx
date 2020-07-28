@@ -25,7 +25,8 @@ class Main_Page extends React.Component{
             var sample_data =  ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             var sample  = {};
             sample.category = sample_data;
-            window.localStorage.setItem("LOCALSTORAGE_KEY", JSON.stringify(sample))
+            window.localStorage.setItem("LOCALSTORAGE_KEY", JSON.stringify(sample));
+            window.location.reload();
         }
     }
 
