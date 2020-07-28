@@ -42,7 +42,7 @@ class Search_Section extends React.Component{
             })
             this.setState({string_data: filter_results})
         }
-        else if(e.keyCode === '8'){
+        else if(e.keyCode === 8){
             this.delete_action(this.state.select_data.length - 1);
         }
     }
