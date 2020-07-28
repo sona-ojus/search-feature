@@ -1,0 +1,97 @@
+.section_list{
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-top: 2px;
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  position: relative;
+}
+
+.new_section{
+  background-color: lightgreen;
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.all_str_list,
+.selected_str_list{
+  display: inline;
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 4px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.selected_str_list{
+  border: 1px solid #ddd;
+  position: relative;
+  background-color: lightgrey;
+}
+
+.strings{
+  display: inline-block;
+  padding: 9px;
+}
+
+.searchBar{
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    width: 300px;
+}
+
+.searchBar,
+.searchBar:active,
+.searchBar:focus{
+  border: white;
+  outline: none;
+}
+
+.close {
+  cursor: pointer;
+  top: 50%;
+  right: 0%;
+  margin-left: 3px;
+  transform: translate(0%, -50%);
+}
+
+#section_name,
+#section_vals{
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    border: 2px solid lightgrey;
+    margin-right: 5px;
+}
+
+.add_new_section button{
+  background: lightblue;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.container{
+  border: 1px solid #ddd;
+  display: inline-block;
+}
+
+.main-container{
+  border: 1px solid lightsteelblue;
+  margin: 10px;
+  padding: 15px;
+}
